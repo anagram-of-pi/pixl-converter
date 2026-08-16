@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-Regular.woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-ExtraBold.woff2");
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("fonts/Roboto-Condensed-Regular.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Roboto Condensed";
+    background-color: #121212;
+    color: #fff;
+}
+
+h1 {
+    width: min-content;
+    text-align: center;
+
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bolder;
+    
+    line-height:  0.9;
+
+    #title-pixl {
+        margin-top: 3rem;
+        font-size: max(5rem, 7vw);
+    }
+    #title-calc {
+        font-size: max(2.5rem, 5vw);
+    }
+}
+

@@ -6,7 +6,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Pixl Calculator</h1>
+    <h1>
+        <div id="title-pixl">Pixl</div>
+        <div id="title-calc">Calculator</div>
+    </h1>
+
+    <form action="">
+        <div class="input-square">
+            <h3>Hours</h3>
+            <input type="number" value="3">
+        </div>
+        
+        <div class="input-square">
+            <h3>Tier</h3>
+            <input type="number" value="2">
+        </div>
+    </form>
+
+    <div id="output">
+        <span id="out-px">~758px</span>
+        <span id="out-dollar">~61.00</span>
+    </div>
+
+    <p id="disclaimer">Note: these values are an unofficial estimation based on the official docs. Do not take them as a guarantee.</p>
+
     <script src="script.js"></script>
 </body>
 </html>
