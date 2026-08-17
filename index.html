@@ -13,22 +13,22 @@
 
     <form action="">
         <div class="input-square">
+            <input type="number" value="15" min="0" id="in-hours">
             <h3>Hours</h3>
-            <input type="number" value="3">
         </div>
         
         <div class="input-square">
+            <input type="number" value="2" min="1" max="4" id="in-tier">
             <h3>Tier</h3>
-            <input type="number" value="2">
         </div>
     </form>
 
     <div id="output">
-        <span id="out-px">~758px</span>
-        <span id="out-dollar">~61.00</span>
+        <span id="out-px">~865px</span>
+        <span id="out-dollar">~$60.57</span>
     </div>
 
-    <p id="disclaimer">Note: these values are an unofficial estimation based on the official docs. Do not take them as a guarantee.</p>
+    <p id="disclaimer">Note: these values are an unofficial estimation based on the official docs. They are not a guarantee, so please do not use them as such.</p>
 
     <script src="script.js"></script>
 </body>
