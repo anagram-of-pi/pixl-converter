@@ -150,6 +150,11 @@ form {
 }
 
 @media (max-width: 585px) {
+    body {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
     form {
         flex-direction: column;
         justify-content: space-around;
