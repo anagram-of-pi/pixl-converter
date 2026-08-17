@@ -168,6 +168,15 @@ form {
     .input-square {
         width: max(10rem, 20%);
     }
+
+    #output {
+        font-size: 1.75em;
+        padding: 2rem;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows:    1fr;
+        grid-template-areas:   "dollar px px px re";
+    }
 }
 
 @media (max-width: 585px) {
@@ -185,9 +194,26 @@ form {
 
     #output {
         font-size: 1.75em;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows:    1fr 1fr;
+        grid-template-areas:   "px    px    px  px  px"
+                               ".   dollar  .   re  . ";
     }
 
     .input-square {
         width: max(10rem, 20%);
+    }
+}
+
+@media (max-height: 670px) {
+    body {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        overflow-y: scroll;
+    }
+
+    form {
+        margin: 3rem;
     }
 }
