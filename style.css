@@ -112,23 +112,44 @@ form {
 #output {
     width: 70vw;
     height: max(10rem, 15vw);
+    padding: 1rem;
     background-color: #fff;
     border-radius: 50px;
 
     color: #000;
-    font-size: 3em;
+    font-size: 2.75em;
+    text-align: center;
     
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:    1fr 1fr;
+    grid-template-areas:   "px    px    px  px  px"
+                           ".   dollar  .   re  . ";
+
+    * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     #out-px {
+        grid-area: px;
+
         font-family: "JetBrains Mono", monospace;
         font-weight: bolder;
         font-size: 1.75em;
     }
     #out-dollar {
+        grid-area: dollar;
+        
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: normal;
+        font-size: 1em;
+        color: #595959;
+    }
+    #out-re {
+        grid-area: re;
+        
         font-family: "Roboto Condensed", sans-serif;
         font-weight: normal;
         font-size: 1em;
@@ -153,6 +174,7 @@ form {
     body {
         padding-top: 10px;
         padding-bottom: 10px;
+        overflow-y: scroll;
     }
 
     form {

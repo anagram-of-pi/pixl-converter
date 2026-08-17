@@ -4,6 +4,7 @@ const tierInput = document.getElementById("in-tier");
 
 const pxOutput = document.getElementById("out-px");
 const dollarsOutput = document.getElementById("out-dollar");
+const reOutput = document.getElementById("out-re");
 
 // Enums for T1-T4
 const { T1, T2, T3, T4 } = { T1: 1, T2: 2, T3: 3, T4: 4 };
@@ -73,7 +74,7 @@ function calculatePoints(hours, tier) {
     const totalPX = (pxPerHour * hours) + dollarsToPX(bonusDollars);
     const totalDollars = pxToDollars(totalPX);
 
-    return { totalPX, totalDollars };
+    return { totalPX, totalDollars, totalRE: projectRE };
 }
 
 function updateValues() {
@@ -90,10 +91,11 @@ function updateValues() {
         throw new Error(`Passed an invalid tier: ${tier}.`);
     }
 
-    const { totalPX, totalDollars } = calculatePoints(hours, tier);
+    const { totalPX, totalDollars, totalRE } = calculatePoints(hours, tier);
 
     pxOutput.textContent = `~${Math.round(totalPX)}px`;
     dollarsOutput.textContent = `~$${totalDollars.toFixed(2)}`;
+    reOutput.textContent = `~${Math.round(totalRE)}RE`;
 }
 
 hoursInput.addEventListener("input", updateValues);
